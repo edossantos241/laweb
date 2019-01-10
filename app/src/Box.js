@@ -51,7 +51,7 @@ class Box extends Component {
         </Modal.Body>
         <Modal.Footer>
 
-          <Button id="Btinscription">Inscription</Button>
+          <Button href="/inscription" id="Btinscription">Inscription</Button>
           <Button onClick={this.handleClose}>Close</Button>
 
         </Modal.Footer>

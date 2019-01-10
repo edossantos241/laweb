@@ -9,6 +9,7 @@ import Mdp from './Mdp';
 import Astuce from './Astuce';
 import Section from './Section';
 import ListeActivite from './ListeActivite';
+import Inscription from './Inscription';
 
 class App extends Component {
 
@@ -71,6 +72,7 @@ class App extends Component {
             <Route path='/astuces' component={Astuce}/>
             <Route path='/contact'component={Section}/>
             <Route path='/activite'component={ListeActivite}/>
+            <Route path='/inscription'component={Inscription}/>
         </Switch>
       </Router>
 

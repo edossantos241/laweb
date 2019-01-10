@@ -31,25 +31,6 @@ class ListeActivite extends Component {
     return (
       <div>
 
-        <TypeActivite title='Développement'/>
-        <div className="container">
-          <div className="row">
-              <Box imgnom='Python' imglink='./images/python.png'
-              modnom='Python' modtitre="Les Bases" modanimateur="Aubry Quentin"
-              moddate="28 Janvier 2019" modnbplace="5"
-              moddescription="Dans cet atelier nous vous présenterons les technologies permettant la production de code Python ainsi qu'un bref récapitulatif de la syntaxe."/>
-          </div>
-        </div>
-        <TypeActivite title='Multimédia'/>
-        <div className="container">
-          <div className="row">
-              <Box imgnom='LibreOfficeWriter' imglink="./images/LOW.jpg"
-              modnom='LibreOfficeWriter' modtitre="Les Touches raccourcis" modanimateur="Aarab Kamal"
-              moddate="15 Mars 2019" modnbplace="5"
-              moddescription="Dans cet activité nous vous présenterons les touches raccourcis permettant la production rapide d'un document texte."/>
-          </div>
-        </div>
-
         <TypeActivite title='Conférence'/>
         <div className="container">
           <div className="row">

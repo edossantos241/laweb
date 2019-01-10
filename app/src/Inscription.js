@@ -7,6 +7,7 @@ class Inscription extends React.Component {
       this.state = {
         name: '',
         prenom: '', 
+        ufr: '',
         adresse: '',
         numero: '',
         newsletter: false};
@@ -15,9 +16,14 @@ class Inscription extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('Nom: ' + this.state.name + ' Prénom: '+this.state.prenom+ ' Adresse: '+this.state.adresse + ' Numéro de téléphone: '+this.state.numero + "Newsletter?"+this.state.newsletter);
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://mi-phpmut.univ-tlse2.fr/~ia.web/index.php?choix=8&nom='+this.state.name +'&prenom='+this.state.prenom+'&mail='+this.state.adresse +'&tel='+this.state.numero +'&abonne='+this.state.newsletter+'&ufr='+ this.state.ufr+'&login=blabla&mdp=votreMdp&desc=votreDescription');
+      console.log('https://mi-phpmut.univ-tlse2.fr/~ia.web/index.php?choix=8&nom='+this.state.name +'&prenom='+this.state.prenom+'&mail='+this.state.adresse +'&tel='+this.state.numero +'&abonne='+this.state.newsletter+'&ufr='+ this.state.ufr+'&login=blabla&mdp=votreMdp&desc=votreDescription')
+      
+      //  https://mi-phpmut.univ-tlse2.fr/~ia.web/index.php?choix='+1+'&nom='+this.state.name +'&prenom='+this.state.prenom+'&mail='+this.state.adresse +'&tel='+this.state.numero +'&abonne='+this.state.newsletter+'&ufr='+ this.state.ufr)
+      
       event.preventDefault();
-    }
+      }
   
     render() {
       return (
@@ -47,6 +53,13 @@ class Inscription extends React.Component {
                                 <input id="prenom" name="prenom" placeholder="Prenom" class="form-control"  type="text" onChange={e => this.setState({prenom: e.target.value})}/>
                               </div>
                             </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                      <input id="ufr" name="ufr" placeholder="UFR" class="form-control"  type="text" onChange={e => this.setState({ufr: e.target.value})}/>
+                    </div>
+                  </div>
                   
                   <div class="form-group">
                               <div class="input-group">
